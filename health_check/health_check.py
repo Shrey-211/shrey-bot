@@ -2,7 +2,7 @@ import json
 import requests
 import yaml
 
-class OllamaClient:
+class OllamaClientHealth:
     def __init__(self):
         with open('health_check/ollama_config.yml', 'r') as file:
             data = yaml.safe_load(file)
@@ -26,8 +26,8 @@ class OllamaClient:
 
 # Testing purpose only
 def main():
-    client = OllamaClient()
-    client.healthCheck()
+    clientHealth = OllamaClientHealth()
+    clientHealth.healthCheck()
 
 if __name__ == "__main__":
     main()
